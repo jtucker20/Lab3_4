@@ -1,6 +1,6 @@
 package edu.mcdaniel.java2206.lab3_4.car;
 
-public abstract class CarBaseClass {
+public abstract class VehicleAbstractClass {
 
     private String make;
     private String model;
@@ -10,7 +10,7 @@ public abstract class CarBaseClass {
 
     private int numberOfWrecks;
 
-    public CarBaseClass(){
+    public VehicleAbstractClass(){
         make = "";
         model = "";
         year = "2020";

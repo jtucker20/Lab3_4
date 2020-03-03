@@ -1,9 +1,9 @@
 package edu.mcdaniel.java2206.lab3_4.fords;
 
-import edu.mcdaniel.java2206.lab3_4.car.CarBaseClass;
+import edu.mcdaniel.java2206.lab3_4.car.VehicleAbstractClass;
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
 
-public class FordF150 extends CarBaseClass implements Vehicle {
+public class FordF150 extends VehicleAbstractClass implements Vehicle {
     @Override
     public void accel(double percentOfMaxAccel) {
 
