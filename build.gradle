@@ -5,8 +5,8 @@ plugins {
     id 'idea'
 }
 
-group = 'edu.mcdaniel.java2206.lab2'
-version = '0.0.2'
+group = 'edu.mcdaniel.java2206.lab3_4'
+version = '0.0.3'
 sourceCompatibility = '11'
 
 repositories {

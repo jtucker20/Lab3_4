@@ -1,8 +1,8 @@
-package edu.mcdaniel.java2206.lab2.vehicles;
+package edu.mcdaniel.java2206.lab3_4.vehicles;
 
-import edu.mcdaniel.java2206.lab2.car.CarBaseClass;
+import edu.mcdaniel.java2206.lab3_4.car.CarBaseClass;
 
-public class ToyotaVehicle extends CarBaseClass {
+public abstract class ToyotaVehicle extends CarBaseClass {
 
     private double speed;
 
@@ -15,6 +15,8 @@ public class ToyotaVehicle extends CarBaseClass {
     public String displaySpeedAsString(){
         return "This Toyota's speed is: " + speed;
     }
+
+    public abstract String getWreckReportForToyota();
 
 
     public double getSpeed() {
