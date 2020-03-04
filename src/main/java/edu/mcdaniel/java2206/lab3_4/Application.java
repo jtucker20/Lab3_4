@@ -5,6 +5,7 @@ import edu.mcdaniel.java2206.lab3_4.fords.FordFocus;
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
 import edu.mcdaniel.java2206.lab3_4.toyotas.ToyotaCamry;
 import edu.mcdaniel.java2206.lab3_4.toyotas.ToyotaCorolla;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,7 +26,7 @@ public class Application {
     /**
      * The logging mechanism of the class.
      */
-    private Logger log;
+    private static Logger log;
 
 
     //=============================================================================================
@@ -60,6 +61,7 @@ public class Application {
 
         //===// Spring Application Hook //=======================================================//
         SpringApplication.run(Application.class, args);
+        log = LogManager.getLogger(Application.class);
 
         //Please do not change this information.
         ToyotaCamry camry = new ToyotaCamry();
@@ -111,7 +113,7 @@ public class Application {
 
         //Printing out the state
         for(Vehicle vehicle : vehicles){
-            System.out.println(vehicle.showVehicleState());
+            log.debug(vehicle.showVehicleState());
         }
     }
 

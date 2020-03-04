@@ -64,8 +64,8 @@ public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
     @Override
     public String showVehicleState() {
 
-        return "This vehicle has an acceleration of: " + this.accelerationRate
-                + "\nThis vehicle has it's lights " + ((this.lightsOn) ? "On" : "Off");
+        return "This Corolla has an acceleration of: " + this.accelerationRate
+                + "\nThis Corolla has it's lights " + ((this.lightsOn) ? "On" : "Off");
     }
 
     //Minor Methods
