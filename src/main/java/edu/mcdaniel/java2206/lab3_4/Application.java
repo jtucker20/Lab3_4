@@ -133,6 +133,11 @@ public class Application {
         for(Vehicle vehicle : vehicleList){
             log.debug(vehicle.showVehicleState());
         }
+
+        //HERE IS WHERE YOU WILL INSERT YOUR CODE TO TEST YOUR INTERFACE!
+
+
+
     }
 
 
