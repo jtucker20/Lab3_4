@@ -71,7 +71,7 @@ public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
     //Minor Methods
     public void corollaLightsDim(double percentDimming){
         this.lightsDimPercentage = percentDimming;
-        System.out.println("Lights have been dimmed to " + this.lightsDimPercentage);
+        System.out.println("Corolla lights have been dimmed to " + this.lightsDimPercentage);
 
     }
 

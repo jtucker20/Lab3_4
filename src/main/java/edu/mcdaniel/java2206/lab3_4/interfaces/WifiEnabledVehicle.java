@@ -25,4 +25,10 @@ public interface WifiEnabledVehicle {
      */
     public Token getToken();
 
+    /**
+     * Password setter
+     */
+
+    public void setWifiPassword(String password);
+
 }

@@ -17,7 +17,7 @@ public class TokenFactory {
         try {
             token.validate();
         } catch (TokenValidatorException tve){
-            log.error(tve.getMessage());
+            log.error(tve);
             return null;
         }
 
