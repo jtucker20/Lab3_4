@@ -1,6 +1,6 @@
-package edu.mcdaniel.java2206.lab3_4.interfaces;
+package edu.mcdaniel.java2206.AndreBerry_lab3_4.interfaces;
 
-import edu.mcdaniel.java2206.lab3_4.security.Token;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.security.Token;
 
 public interface WifiEnabledVehicle {
 

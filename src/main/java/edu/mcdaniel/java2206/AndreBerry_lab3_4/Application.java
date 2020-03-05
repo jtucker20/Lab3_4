@@ -1,13 +1,13 @@
-package edu.mcdaniel.java2206.lab3_4;
+package edu.mcdaniel.java2206.AndreBerry_lab3_4;
 
-import edu.mcdaniel.java2206.lab3_4.fords.FordF150;
-import edu.mcdaniel.java2206.lab3_4.fords.FordFocus;
-import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
-import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
-import edu.mcdaniel.java2206.lab3_4.security.Token;
-import edu.mcdaniel.java2206.lab3_4.security.TokenValidator;
-import edu.mcdaniel.java2206.lab3_4.toyotas.ToyotaCamry;
-import edu.mcdaniel.java2206.lab3_4.toyotas.ToyotaCorolla;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.fords.FordF150;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.fords.FordFocus;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.interfaces.Vehicle;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.interfaces.WifiEnabledVehicle;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.security.Token;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.security.TokenValidator;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.toyotas.ToyotaCamry;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.toyotas.ToyotaCorolla;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;

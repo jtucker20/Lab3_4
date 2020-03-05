@@ -1,9 +1,9 @@
-package edu.mcdaniel.java2206.lab3_4.fords;
+package edu.mcdaniel.java2206.AndreBerry_lab3_4.fords;
 
-import edu.mcdaniel.java2206.lab3_4.car.VehicleAbstractClass;
-import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.interfaces.Vehicle;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.vehicles.FordVehicle;
 
-public class FordF150 extends VehicleAbstractClass implements Vehicle {
+public class FordFocus extends FordVehicle implements Vehicle {
 
     //Private Assets
     private double accelerationRate;
@@ -12,7 +12,7 @@ public class FordF150 extends VehicleAbstractClass implements Vehicle {
     private boolean lightsOn;
 
     //Constructors
-    public FordF150(){
+    public FordFocus(){
         super();
         setModel("F150");
         this.lightsOn = false;
@@ -51,8 +51,8 @@ public class FordF150 extends VehicleAbstractClass implements Vehicle {
 
     @Override
     public String showVehicleState() {
-        return "This Ford F150 has an acceleration of: " + this.accelerationRate
-                + "\nThis Ford F150 has it's lights " + ((this.lightsOn) ? "On" : "Off");
+        return "This Ford Focus has an acceleration of: " + this.accelerationRate
+                + "\nThis Ford Focus has it's lights " + ((this.lightsOn) ? "On" : "Off");
     }
 
     //Getters

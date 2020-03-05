@@ -1,6 +1,6 @@
-package edu.mcdaniel.java2206.lab3_4.vehicles;
+package edu.mcdaniel.java2206.AndreBerry_lab3_4.vehicles;
 
-import edu.mcdaniel.java2206.lab3_4.car.VehicleAbstractClass;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.car.VehicleAbstractClass;
 
 public abstract class ToyotaVehicle extends VehicleAbstractClass {
 

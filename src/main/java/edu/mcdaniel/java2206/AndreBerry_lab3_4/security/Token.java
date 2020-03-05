@@ -1,8 +1,7 @@
-package edu.mcdaniel.java2206.lab3_4.security;
+package edu.mcdaniel.java2206.AndreBerry_lab3_4.security;
 
-import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
+import edu.mcdaniel.java2206.AndreBerry_lab3_4.interfaces.WifiEnabledVehicle;
 
-import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Base64;
