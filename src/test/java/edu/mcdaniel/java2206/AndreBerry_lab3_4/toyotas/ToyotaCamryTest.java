@@ -58,4 +58,19 @@ class ToyotaCamryTest {
     @Test
     void testToggleLights() {
     }
+
+    @Test
+    void getToken()
+    {
+        //Arrange
+        String expected = "";
+        camry.setWifiPassword("password");
+
+        //Act
+       // Token token = camry.getToken();
+       // token.generateTokenString();
+
+        //Assert
+        //assertEquals(expected, token.getTokenString());
+    }
 }
