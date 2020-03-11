@@ -1,9 +1,13 @@
 package edu.mcdaniel.java2206.lab3_4.toyotas;
 
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
+import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
+import edu.mcdaniel.java2206.lab3_4.security.Token;
+import edu.mcdaniel.java2206.lab3_4.security.TokenFactory;
+import edu.mcdaniel.java2206.lab3_4.security.WifiProviderName;
 import edu.mcdaniel.java2206.lab3_4.vehicles.ToyotaVehicle;
 
-public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
+public class ToyotaCorolla extends ToyotaVehicle implements Vehicle, WifiEnabledVehicle {
 
 
     //Private Assets
@@ -13,10 +17,12 @@ public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
     private boolean lightsOn;
     private double lightsDimPercentage;
 
+    private String corollaWifiPassword;
+
     //Constructors
     public ToyotaCorolla(){
         super();
-        setModel("Corola");
+        setModel("Corolla");
         this.lightsOn = false;
     }
 
@@ -68,6 +74,19 @@ public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
                 + "\nThis Corolla has it's lights " + ((this.lightsOn) ? "On" : "Off");
     }
 
+    @Override
+    public String getWifiProvider() {return WifiProviderName.TOYOTA_VEHICLE_WIFI_PROVIDER.toString();}
+
+    @Override
+    public String getNetworkName(){return "labNetwork";}
+
+    @Override
+    public Token getToken() {
+        return TokenFactory.getToken(this.getWifiProvider(),
+                this.getNetworkName(),
+                this.corollaWifiPassword);
+    }
+
     //Minor Methods
     public void corollaLightsDim(double percentDimming){
         this.lightsDimPercentage = percentDimming;
@@ -91,4 +110,7 @@ public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
     public double getLightsDimPercentage() {
         return lightsDimPercentage;
     }
+
+    @Override
+    public void setWifiPassword(String password) {this.corollaWifiPassword = "r0yalArmour";}
 }

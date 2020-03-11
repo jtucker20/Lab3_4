@@ -6,6 +6,7 @@ import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Objects;
 
 /**
  * This class IS NOT SECURE AND IS NOT TO BE TAKEN AS AN EXAMPLE OF HOW
@@ -102,6 +103,22 @@ public class Token {
                 throw new TokenValidatorException("Wrong Password!");
             }
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Token)) return false;
+        Token token = (Token) o;
+        return getWifiProviderName().equals(token.getWifiProviderName()) &&
+                getWifiNetworkName().equals(token.getWifiNetworkName()) &&
+                getWifiPassword().equals(token.getWifiPassword()) &&
+                Objects.equals(getTokenString(), token.getTokenString());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getWifiProviderName(), getWifiNetworkName(), getWifiPassword(), getTokenString());
     }
 
     //Getters and Setters

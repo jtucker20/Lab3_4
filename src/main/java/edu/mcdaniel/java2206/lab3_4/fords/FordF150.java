@@ -2,8 +2,12 @@ package edu.mcdaniel.java2206.lab3_4.fords;
 
 import edu.mcdaniel.java2206.lab3_4.car.VehicleAbstractClass;
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
+import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
+import edu.mcdaniel.java2206.lab3_4.security.Token;
+import edu.mcdaniel.java2206.lab3_4.security.TokenFactory;
+import edu.mcdaniel.java2206.lab3_4.security.WifiProviderName;
 
-public class FordF150 extends VehicleAbstractClass implements Vehicle {
+public class FordF150 extends VehicleAbstractClass implements Vehicle, WifiEnabledVehicle {
 
     //Private Assets
     private double accelerationRate;
@@ -11,6 +15,8 @@ public class FordF150 extends VehicleAbstractClass implements Vehicle {
 
     private boolean lightsOn;
 
+    private String f150WifiPassword;
+    // I like to set each password to be a different variable name in order to keep it straight in my head
     //Constructors
     public FordF150(){
         super();
@@ -55,6 +61,21 @@ public class FordF150 extends VehicleAbstractClass implements Vehicle {
                 + "\nThis Ford F150 has it's lights " + ((this.lightsOn) ? "On" : "Off");
     }
 
+    @Override
+    public String getWifiProvider() {
+        return WifiProviderName.FORD_VEHICLE_WIFI_PROVIDER.toString();
+    }
+
+    @Override
+    public String getNetworkName() {return "labNetwork"; }
+
+    @Override
+    public Token getToken() {
+        return TokenFactory.getToken(this.getWifiProvider(),
+                this.getNetworkName(),
+                this.f150WifiPassword);
+    }
+
     //Getters
     public double getAccelerationRate() {
         return accelerationRate;
@@ -66,5 +87,10 @@ public class FordF150 extends VehicleAbstractClass implements Vehicle {
 
     public boolean isLightsOn() {
         return lightsOn;
+    }
+
+    @Override
+    public void setWifiPassword(String password){
+        this.f150WifiPassword = "Ting1e";
     }
 }
