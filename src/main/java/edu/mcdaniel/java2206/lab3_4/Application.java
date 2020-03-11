@@ -82,7 +82,7 @@ public class Application {
         vehicleList.add(veh2);
 //        wifiVehicles.add(veh2);
         vehicleList.add(veh3);
-//        wifiVehicles.add(veh3);
+
         vehicleList.add(veh4);
 //        wifiVehicles.add(veh4);
 
