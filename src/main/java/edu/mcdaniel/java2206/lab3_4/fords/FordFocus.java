@@ -19,6 +19,11 @@ public class FordFocus extends FordVehicle implements Vehicle {
     }
 
     @Override
+    public String getWreckReportForFord() {
+        return null;
+    }
+
+    @Override
     public String wreckReport() {
         return "This Vehicle has been in " + getNumberOfWrecks() + " wrecks.";
     }

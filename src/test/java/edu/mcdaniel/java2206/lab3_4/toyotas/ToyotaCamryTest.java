@@ -1,5 +1,7 @@
 package edu.mcdaniel.java2206.lab3_4.toyotas;
 
+import edu.mcdaniel.java2206.lab3_4.security.Token;
+import edu.mcdaniel.java2206.lab3_4.security.WifiProviderName;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -57,5 +59,32 @@ class ToyotaCamryTest {
 
     @Test
     void testToggleLights() {
+    }
+
+    @Test
+    void getWifiProvider() {
+        //Arrange
+        String expected = WifiProviderName.TOYOTA_VEHICLE_WIFI_PROVIDER.toString();
+
+        //Act
+        String actual =
+    }
+
+    @Test
+    void getNetworkName() {
+    }
+
+    @Test
+    void getToken() {
+        //Arrange
+        camry.setWifiPassword("password");
+
+        //Act
+        Token tokon = camry.getToken();
+        Token token = new Token();
+        token.generatokenString();
+
+       // Assert
+        assertEquals(expected, token.getTokenString());
     }
 }

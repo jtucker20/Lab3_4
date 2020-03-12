@@ -131,11 +131,17 @@ public class Application {
 
         //Printing out the state
         for(Vehicle vehicle : vehicleList){
-            log.debug(vehicle.showVehicleState());
+            log.info(vehicle.showVehicleState());
         }
 
         //HERE IS WHERE YOU WILL INSERT YOUR CODE TO TEST YOUR INTERFACE!
 
+        veh1.gender("male");
+        veh1.tone("male");
+        String[] str =  veh1.getDirection();
+        for(String s: str ){
+            log.info(s);
+        }
 
 
     }

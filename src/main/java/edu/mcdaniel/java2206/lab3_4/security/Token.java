@@ -132,4 +132,7 @@ public class Token {
     public String getTokenString() {
         return tokenString;
     }
+
+    public void generatokenString() {
+    }
 }

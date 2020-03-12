@@ -1,5 +1,6 @@
 package edu.mcdaniel.java2206.lab3_4.toyotas;
 
+import edu.mcdaniel.java2206.lab3_4.interfaces.SiriEnabledVehicle;
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
 import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
 import edu.mcdaniel.java2206.lab3_4.security.*;
@@ -7,7 +8,7 @@ import edu.mcdaniel.java2206.lab3_4.vehicles.ToyotaVehicle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVehicle {
+public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVehicle, SiriEnabledVehicle {
 
     //Private Assets
     private Logger log = LogManager.getLogger(ToyotaCamry.class);
@@ -17,6 +18,9 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
     private String toyotaWifiPassword;
 
     private boolean lightsOn;
+    private GenderEmun genderOfSiri;
+    private ToneEnum toneOfVoice;
+
 
     //Constructors
     public ToyotaCamry(){
@@ -28,12 +32,13 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
     //Major Methods
     @Override
     public String wreckReport() {
+
         return "This Vehicle has been in " + getNumberOfWrecks() + " wrecks.";
     }
 
     @Override
     public String getWreckReportForToyota() {
-        return "This Toyota has been in " + getNumberOfWrecks() + " wrecks.";
+        return "This Vehicle has been in " + getNumberOfWrecks() + " wrecks.";
     }
 
     @Override
@@ -67,8 +72,8 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
                 + "\nThis Camry has it's lights " + ((this.lightsOn) ? "On" : "Off");
     }
 
-    @Override
-    public String getWifiProvider() {
+   @Override
+    public String  getWifiProvider() {
         return WifiProviderName.TOYOTA_VEHICLE_WIFI_PROVIDER.toString();
     }
 
@@ -85,6 +90,10 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
                                      this.getNetworkName(),
                                      this.toyotaWifiPassword);
     }
+    @Override
+    public void setWifiPassword(String password){
+        this.toyotaWifiPassword = password;
+    }
 
     //Getters
     public double getAccelerationRate() {
@@ -99,8 +108,37 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
         return lightsOn;
     }
 
+
     @Override
-    public void setWifiPassword(String password){
-        this.toyotaWifiPassword = password;
+    public void gender(String genderOfSiri) {
+        if(genderOfSiri.toLowerCase().equals("female") ){
+            this.genderOfSiri = GenderEmun.FEMALE;
+        }
+        if(genderOfSiri.toLowerCase().equals("male")){
+            this.genderOfSiri = GenderEmun.MALE;
+        }
+
+    }
+
+    @Override
+    public void tone(String toneOfVoice) {
+        if(toneOfVoice.toLowerCase().equals("female")){
+            this.toneOfVoice = ToneEnum.HIGH_PITCH_VOICE;
+        }
+        if(toneOfVoice.toLowerCase().equals("male")){
+            this.toneOfVoice = ToneEnum.DEEP_VOICE;
+        }
+    }
+
+    @Override
+    public String[] getDirection() {
+        String[] directions = new String[3];
+        directions[0] = "'Turn Right!' Says a " + this.toneOfVoice.toString() + " " + this.genderOfSiri + " Siri Voice.";
+        directions[1] = "'Turn Left!' Says a "  + this.toneOfVoice.toString() + " " + this.genderOfSiri + " Siri Voice.";
+        directions [2] = "'Go Straight!' Says a "  + this.toneOfVoice.toString() + " " + this.genderOfSiri + " Siri Voice.";
+
+
+
+        return directions;
     }
 }
