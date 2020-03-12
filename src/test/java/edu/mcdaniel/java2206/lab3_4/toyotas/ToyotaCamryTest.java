@@ -15,6 +15,14 @@ class ToyotaCamryTest {
     }
 
     @Test
+    void wreckReport() {
+    }
+
+    @Test
+    void getWreckReportForToyota() {
+    }
+
+    @Test
     void accel() {
         //Arrange
         double expected = 70.0;
@@ -58,4 +66,36 @@ class ToyotaCamryTest {
     @Test
     void testToggleLights() {
     }
+
+    @Test
+    void getWifiProvider() {
+    }
+
+    @Test
+    void getNetworkName() {
+    }
+
+    @Test
+    void getToken() {
+    }
+
+    @Test
+    void setWifiPassword() {
+    }
+
+    @Test
+    void timeTraveled(){
+
+    }
+
+    @Test
+    void arrivalTime(){
+
+    }
+
+    @Test
+    double getMph(){
+
+    }
+
 }
