@@ -3,6 +3,7 @@ package edu.mcdaniel.java2206.lab3_4;
 import edu.mcdaniel.java2206.lab3_4.fords.FordF150;
 import edu.mcdaniel.java2206.lab3_4.fords.FordFocus;
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
+import edu.mcdaniel.java2206.lab3_4.interfaces.VehicleWithMapping;
 import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
 import edu.mcdaniel.java2206.lab3_4.security.Token;
 import edu.mcdaniel.java2206.lab3_4.security.TokenValidator;
@@ -135,8 +136,19 @@ public class Application {
         }
 
         //HERE IS WHERE YOU WILL INSERT YOUR CODE TO TEST YOUR INTERFACE!
-
-
+        List<VehicleWithMapping> newVehicleList = new ArrayList<>();
+        newVehicleList.add(veh1);
+        newVehicleList.add(veh2);
+        newVehicleList.add(veh4);
+        System.out.println("Hi!");
+        System.out.println(newVehicleList);
+        for(VehicleWithMapping vehicle : newVehicleList)
+        {
+            vehicle.accel(Math.random());
+            vehicle.setLocation(0,0);
+            vehicle.setDestination(10, 25);
+            System.out.println(vehicle.getETA());
+        }
 
     }
 
