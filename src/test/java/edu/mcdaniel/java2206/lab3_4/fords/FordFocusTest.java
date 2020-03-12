@@ -16,6 +16,14 @@ class FordFocusTest {
 
     @Test
     void wreckReport() {
+        //Arrange
+        String expected = "";
+
+        //Act
+        this.focus.wreckReport();
+
+        //Assert
+        assertEquals(expected, this.focus.wreckReport());
     }
 
     @Test
