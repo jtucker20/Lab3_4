@@ -51,18 +51,6 @@ class FordFocusTest {
     }
 
     @Test
-    void turnOnLights() {
-    }
-
-    @Test
-    void toggleLights() {
-    }
-
-    @Test
-    void showLightsStatus() {
-    }
-
-    @Test
     void showVehicleState() {
         //Arrange
         String expected = "This vehicle has an acceleration of: 0.0\n" +

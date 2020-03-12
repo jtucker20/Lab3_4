@@ -42,17 +42,6 @@ class FordF150Test {
         assertEquals(expected, this.F150.getAccelerationRate());
     }
 
-    @Test
-    void turnOnLights() {
-    }
-
-    @Test
-    void toggleLights() {
-    }
-
-    @Test
-    void showLightsStatus() {
-    }
 
     @Test
     void showVehicleState() {

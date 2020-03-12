@@ -47,25 +47,6 @@ class ToyotaCamryTest {
         assertEquals(expected, this.camry.getAccelerationRate());
     }
 
-    @Test
-    void turnOnLights() {
-    }
-
-    @Test
-    void toggleLights() {
-    }
-
-    @Test
-    void testAccel() {
-    }
-
-    @Test
-    void testBrake() {
-    }
-
-    @Test
-    void testToggleLights() {
-    }
 
     @Test
     void getWifiProvider() {

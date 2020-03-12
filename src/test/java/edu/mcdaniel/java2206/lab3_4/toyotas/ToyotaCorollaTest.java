@@ -46,17 +46,7 @@ class ToyotaCorollaTest {
         assertEquals(expected, this.corolla.getAccelerationRate());
     }
 
-    @Test
-    void turnOnLights() {
-    }
 
-    @Test
-    void toggleLights() {
-    }
-
-    @Test
-    void showLightsStatus() {
-    }
 
     @Test
     void showVehicleState() {
