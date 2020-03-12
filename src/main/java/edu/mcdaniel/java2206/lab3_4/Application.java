@@ -73,6 +73,8 @@ public class Application {
         FordFocus veh3 = new FordFocus();
         FordF150 veh4 = new FordF150();
 
+        ToyotaCamry veh5 = new ToyotaCamry();
+
         //Adding these to the list
 
         List<Vehicle> vehicleList = new ArrayList<>();
@@ -80,11 +82,13 @@ public class Application {
         vehicleList.add(veh1);
         wifiVehicles.add(veh1);
         vehicleList.add(veh2);
-//        wifiVehicles.add(veh2);
+        wifiVehicles.add(veh2);
         vehicleList.add(veh3);
-//        wifiVehicles.add(veh3);
+        // wifiVehicles.add(veh3);
         vehicleList.add(veh4);
-//        wifiVehicles.add(veh4);
+        wifiVehicles.add(veh4);
+        vehicleList.add(veh5);
+        wifiVehicles.add(veh5);
 
         for(Vehicle vehicle : vehicleList){
 

@@ -1,5 +1,6 @@
 package edu.mcdaniel.java2206.lab3_4.toyotas;
 
+import edu.mcdaniel.java2206.lab3_4.interfaces.GPSVehicle;
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
 import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
 import edu.mcdaniel.java2206.lab3_4.security.*;
@@ -7,13 +8,17 @@ import edu.mcdaniel.java2206.lab3_4.vehicles.ToyotaVehicle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVehicle {
+public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVehicle, GPSVehicle {
 
     //Private Assets
     private Logger log = LogManager.getLogger(ToyotaCamry.class);
 
     private double accelerationRate;
+    private double timeTraveled;
+    private double mph;
     private double distance;
+    private double startTime;
+    private double arrivalTime;
     private String toyotaWifiPassword;
 
     private boolean lightsOn;
@@ -84,6 +89,24 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
         return TokenFactory.getToken(this.getWifiProvider(),
                                      this.getNetworkName(),
                                      this.toyotaWifiPassword);
+    }
+
+    @Override
+    public void timeTraveled()
+    {
+        this.timeTraveled = distance/mph;
+    }
+
+    @Override
+    public void arrivalTime()
+    {
+        arrivalTime = startTime + timeTraveled;
+    }
+
+    @Override
+    public double getMph()
+    {
+        return mph;
     }
 
     //Getters
