@@ -1,17 +1,26 @@
 package edu.mcdaniel.java2206.lab3_4.toyotas;
 
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
+import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
+import edu.mcdaniel.java2206.lab3_4.security.Token;
+import edu.mcdaniel.java2206.lab3_4.security.TokenFactory;
+import edu.mcdaniel.java2206.lab3_4.security.WifiProviderName;
 import edu.mcdaniel.java2206.lab3_4.vehicles.ToyotaVehicle;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
+public class ToyotaCorolla extends ToyotaVehicle implements Vehicle, WifiEnabledVehicle {
 
 
     //Private Assets
+    private Logger log = LogManager.getLogger(ToyotaCorolla.class);
+
     private double accelerationRate;
     private double distance;
 
     private boolean lightsOn;
     private double lightsDimPercentage;
+    private String toyotaWifiPassword;
 
     //Constructors
     public ToyotaCorolla(){
@@ -75,6 +84,25 @@ public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
 
     }
 
+    @Override
+    public String getWifiProvider() {
+        return WifiProviderName.TOYOTA_VEHICLE_WIFI_PROVIDER.toString();
+    }
+
+    @Override
+    public String getNetworkName() {
+        //I was too lazy to customize the name of the network.  USE THIS FOR ALL
+        // OF THE NETWORKS YOU HAVE TO IMPLEMENT!!
+        return "labNetwork";
+    }
+
+    @Override
+    public Token getToken() {
+        return TokenFactory.getToken(this.getWifiProvider(),
+                this.getNetworkName(),
+                this.toyotaWifiPassword);
+    }
+
     //Getters
     public double getAccelerationRate() {
         return accelerationRate;
@@ -90,5 +118,10 @@ public class ToyotaCorolla extends ToyotaVehicle implements Vehicle {
 
     public double getLightsDimPercentage() {
         return lightsDimPercentage;
+    }
+
+    @Override
+    public void setWifiPassword(String password){
+        this.toyotaWifiPassword = password;
     }
 }
