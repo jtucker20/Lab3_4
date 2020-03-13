@@ -79,17 +79,49 @@ class ToyotaCorollaTest {
 
     @Test
     void getWifiProvider() {
+        //Arrange
+        String expected  = "";
+
+        //Act
+        String actual = corolla.getWifiProvider();
+
+        //Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     void getNetworkName() {
+        //Arrange
+        String expected  = "";
+
+        //Act
+        String actual = corolla.getNetworkName();
+
+        //Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     void getToken() {
+        //Arrange
+        String expected = "";
+
+        //Act
+        corolla.getToken();
+
+        //Assert
+        assertEquals(expected, corolla.getToken());
     }
 
     @Test
     void setWifiPassword() {
+        //Arrange
+        String expected  = "";
+
+        //Act
+        corolla.setWifiPassword();
+
+        //Assert
+        assertEquals(expected, corolla.setWifiPassword());
     }
 }

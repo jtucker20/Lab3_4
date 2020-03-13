@@ -67,17 +67,49 @@ class FordF150Test {
 
     @Test
     void getWifiProvider() {
+        //Arrange
+        String expected  = "";
+
+        //Act
+        String actual = F150.getWifiProvider();
+
+        //Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     void getNetworkName() {
+        //Arrange
+        String expected  = "";
+
+        //Act
+        String actual = F150.getNetworkName();
+
+        //Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     void getToken() {
+        //Arrange
+        String expected = "";
+
+        //Act
+        F150.getToken();
+
+        //Assert
+        assertEquals(expected, F150.getToken());
     }
 
     @Test
     void setWifiPassword() {
+        //Arrange
+        String expected  = "";
+
+        //Act
+        F150.setWifiPassword();
+
+        //Assert
+        assertEquals(expected, F150.setWifiPassword());
     }
 }

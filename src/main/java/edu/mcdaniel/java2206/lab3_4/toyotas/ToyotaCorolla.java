@@ -120,8 +120,7 @@ public class ToyotaCorolla extends ToyotaVehicle implements Vehicle, WifiEnabled
         return lightsDimPercentage;
     }
 
-    @Override
-    public void setWifiPassword(String password){
+    public void setWifiPassword(){
         this.toyotaWifiPassword = password;
     }
 }

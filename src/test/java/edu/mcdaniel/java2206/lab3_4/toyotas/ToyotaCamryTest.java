@@ -62,12 +62,7 @@ class ToyotaCamryTest {
 
         //Assert
         assertEquals(10.00, this.camry.arrivalTime());
-
     }
 
-    @Test
-    double getMph(){
-
-    }
 
 }
