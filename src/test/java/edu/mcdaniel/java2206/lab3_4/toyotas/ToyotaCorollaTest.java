@@ -16,10 +16,26 @@ class ToyotaCorollaTest {
 
     @Test
     void wreckReport() {
+        //Arrange
+        String expected = "";
+
+        //Act
+        this.corolla.wreckReport();
+
+        //Assert
+        assertEquals(expected, this.corolla.wreckReport());
     }
 
     @Test
     void getWreckReportForToyota() {
+        //Arrange
+        String expected = "";
+
+        //Act
+        this.corolla.getWreckReportForToyota();
+
+        //Assert
+        assertEquals(expected, this.corolla.getWreckReportForToyota());
     }
 
     @Test
@@ -45,8 +61,6 @@ class ToyotaCorollaTest {
         //Assert
         assertEquals(expected, this.corolla.getAccelerationRate());
     }
-
-
 
     @Test
     void showVehicleState() {

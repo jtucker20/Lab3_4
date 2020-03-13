@@ -16,6 +16,14 @@ class FordF150Test {
 
     @Test
     void wreckReport() {
+        //Arrange
+        String expected = "";
+
+        //Act
+        this.F150.wreckReport();
+
+        //Assert
+        assertEquals(expected, this.F150.wreckReport());
     }
 
     @Test

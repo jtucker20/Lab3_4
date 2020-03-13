@@ -15,14 +15,6 @@ class ToyotaCamryTest {
     }
 
     @Test
-    void wreckReport() {
-    }
-
-    @Test
-    void getWreckReportForToyota() {
-    }
-
-    @Test
     void accel() {
         //Arrange
         double expected = 70.0;
@@ -47,30 +39,29 @@ class ToyotaCamryTest {
         assertEquals(expected, this.camry.getAccelerationRate());
     }
 
-
-    @Test
-    void getWifiProvider() {
-    }
-
-    @Test
-    void getNetworkName() {
-    }
-
-    @Test
-    void getToken() {
-    }
-
-    @Test
-    void setWifiPassword() {
-    }
-
     @Test
     void timeTraveled(){
+        //Arrange
+        double expected = 30.0;
+
+        //Act
+        this.camry.timeTraveled();
+
+        //Assert
+        assertEquals(30.0, this.camry.timeTraveled());
 
     }
 
     @Test
     void arrivalTime(){
+        //Arrange
+        double expected = 10.00;
+
+        //Act
+        this.camry.arrivalTime();
+
+        //Assert
+        assertEquals(10.00, this.camry.arrivalTime());
 
     }
 

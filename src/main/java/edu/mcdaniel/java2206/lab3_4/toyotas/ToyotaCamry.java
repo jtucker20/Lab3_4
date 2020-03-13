@@ -92,15 +92,17 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
     }
 
     @Override
-    public void timeTraveled()
+    public double timeTraveled()
     {
-        this.timeTraveled = distance/mph;
+        double result = distance/mph;
+        return result;
     }
 
     @Override
-    public void arrivalTime()
+    public double arrivalTime()
     {
         arrivalTime = startTime + timeTraveled;
+        return arrivalTime;
     }
 
     @Override
