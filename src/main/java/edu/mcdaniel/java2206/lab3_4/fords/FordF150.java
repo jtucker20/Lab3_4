@@ -110,7 +110,7 @@ public class FordF150 extends VehicleAbstractClass implements Vehicle, WifiEnabl
     }
 
     @Override
-    public void gender(String genderOfSiri) {
+    public String gender(String genderOfSiri) {
         if(genderOfSiri.toLowerCase().equals("female") ){
             this.genderOfSiri = GenderEmun.FEMALE;
         }
@@ -118,6 +118,7 @@ public class FordF150 extends VehicleAbstractClass implements Vehicle, WifiEnabl
             this.genderOfSiri = GenderEmun.MALE;
         }
 
+        return genderOfSiri;
     }
 
     @Override

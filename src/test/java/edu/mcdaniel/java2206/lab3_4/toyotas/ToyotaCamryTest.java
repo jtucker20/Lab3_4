@@ -43,6 +43,8 @@ class ToyotaCamryTest {
 
     @Test
     void turnOnLights() {
+        //Arrange
+
     }
 
     @Test
@@ -67,7 +69,10 @@ class ToyotaCamryTest {
         String expected = WifiProviderName.TOYOTA_VEHICLE_WIFI_PROVIDER.toString();
 
         //Act
-        String actual =
+        String actual = this.camry.getWifiProvider().toString();
+
+        //Assert
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -77,14 +82,39 @@ class ToyotaCamryTest {
     @Test
     void getToken() {
         //Arrange
+        String expected = "VE9ZT1RBX1ZFSElDTEVfV0lGSV9QUk9WSURFUmxhYk5ldHdvcmtwYXNzd29yZA==";
         camry.setWifiPassword("password");
 
         //Act
-        Token tokon = camry.getToken();
-        Token token = new Token();
+        Token token = camry.getToken();
         token.generatokenString();
 
        // Assert
         assertEquals(expected, token.getTokenString());
+    }
+
+    //Tests for new methods
+    @Test
+    void gender() {
+        //Arrange
+        String expected = GenderEmun.FEMALE.toString();
+
+        //Act
+        String actual = this.camry.gender("female");
+
+        //Assert
+        assertEquals(expected, actual);
+
+
+    }
+
+
+    @Test
+    void tone() {
+    }
+
+    @Test
+    void getDirection() {
+      //  String expected = getDirection.
     }
 }

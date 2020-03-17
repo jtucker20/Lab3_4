@@ -39,7 +39,7 @@ public class Application {
     /**
      * The constructor for the Spring Boot application
      */
-    public Application(){
+    public Application() {
         //This constructor is empty as no additional information need be provided.
         //This is an implemented No Argument Constructor.
     }
@@ -58,6 +58,7 @@ public class Application {
 
     /**
      * This method actually accomplishes the running of the code we are seeking to write
+     *
      * @param args the input from the command line.
      */
     public static void main(String[] args) throws Exception {
@@ -86,23 +87,23 @@ public class Application {
         vehicleList.add(veh4);
 //        wifiVehicles.add(veh4);
 
-        for(Vehicle vehicle : vehicleList){
+        for (Vehicle vehicle : vehicleList) {
 
-            if(vehicle instanceof ToyotaCorolla){
+            if (vehicle instanceof ToyotaCorolla) {
                 ToyotaCorolla thisToyotaCorolla = (ToyotaCorolla) vehicle;
                 thisToyotaCorolla.corollaLightsDim(0.0);
             }
         }
 
 
-        for(Vehicle vehicle : vehicleList){
+        for (Vehicle vehicle : vehicleList) {
             vehicle.turnOnLights();
         }
         //For your convenience, I'm providing a dev password that will expire!!!
         //You only have until the due date before it stops working!
         String devPassword = "password";
-        for(WifiEnabledVehicle vehicle : wifiVehicles){
-            if(vehicle instanceof FordFocus){
+        for (WifiEnabledVehicle vehicle : wifiVehicles) {
+            if (vehicle instanceof FordFocus) {
                 continue;
             }
             vehicle.setWifiPassword(devPassword);
@@ -110,12 +111,12 @@ public class Application {
             log.info("This is your vehicle's wifi token: {}", token.getTokenString());
             boolean validated = TokenValidator.validateToken(token);
 
-            if(!validated){
+            if (!validated) {
                 throw new Exception("INVALID IMPELMENTATION!");
             }
         }
 
-        for(Vehicle vehicle : vehicleList){
+        for (Vehicle vehicle : vehicleList) {
             log.debug(vehicle.showLightsStatus());
         }
 
@@ -123,14 +124,14 @@ public class Application {
 
 
         //Doing some actions on the vehicles.
-        for(Vehicle vehicle : vehicleList){
+        for (Vehicle vehicle : vehicleList) {
             vehicle.accel(50);
             vehicle.toggleLights();
             vehicle.brake(75);
         }
 
         //Printing out the state
-        for(Vehicle vehicle : vehicleList){
+        for (Vehicle vehicle : vehicleList) {
             log.info(vehicle.showVehicleState());
         }
 
@@ -138,26 +139,35 @@ public class Application {
 
         veh1.gender("male");
         veh1.tone("male");
-        String[] str =  veh1.getDirection();
-        for(String s: str ){
+        String[] str = veh1.getDirection();
+        for (String s : str) {
+            log.info(s);
+        }
+        veh2.gender("male");
+        veh2.tone("male");
+        String[] strg = veh1.getDirection();
+        for (String s : strg) {
+            log.info(s);
+        }
+        veh4.gender("male");
+        veh4.tone("male");
+        String[] strgn = veh1.getDirection();
+        for (String s : strgn) {
             log.info(s);
         }
 
 
+        //=============================================================================================
+        // Minor Methods(s)
+        //=============================================================================================
+
+        //No minor methods made for this class
+
+
+        //=============================================================================================
+        // Getters and Setters
+        //=============================================================================================
+
+        //No private assets we want to expose in this class
     }
-
-
-    //=============================================================================================
-    // Minor Methods(s)
-    //=============================================================================================
-
-    //No minor methods made for this class
-
-
-    //=============================================================================================
-    // Getters and Setters
-    //=============================================================================================
-
-    //No private assets we want to expose in this class
-
 }

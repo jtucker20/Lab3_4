@@ -110,7 +110,7 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
 
 
     @Override
-    public void gender(String genderOfSiri) {
+    public String gender(String genderOfSiri) {
         if(genderOfSiri.toLowerCase().equals("female") ){
             this.genderOfSiri = GenderEmun.FEMALE;
         }
@@ -118,6 +118,7 @@ public class ToyotaCamry extends ToyotaVehicle implements Vehicle, WifiEnabledVe
             this.genderOfSiri = GenderEmun.MALE;
         }
 
+        return genderOfSiri;
     }
 
     @Override
