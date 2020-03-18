@@ -58,4 +58,20 @@ class ToyotaCamryTest {
     @Test
     void testToggleLights() {
     }
+
+    @Test
+    void getWifiProvider() {
+    }
+
+    @Test
+    void getNetworkName() {
+    }
+
+    @Test
+    void getToken() {
+    }
+
+    @Test
+    void setWifiPassword() {
+    }
 }

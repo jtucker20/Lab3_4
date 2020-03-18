@@ -20,7 +20,7 @@ class SearchTesterTest {
         //Act
         tokens[0].generateTokenString();
         tokens[1].generateTokenString();
-        TokenSearcher searcher = new TokenSearcher()
+        TokenSearcher searcher = new TokenSearcher();
 
 
     }

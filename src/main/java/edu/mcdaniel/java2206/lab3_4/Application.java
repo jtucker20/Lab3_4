@@ -135,7 +135,17 @@ public class Application {
         }
 
         //HERE IS WHERE YOU WILL INSERT YOUR CODE TO TEST YOUR INTERFACE!
+        //Creating new Ford F150 to show off new interface
+        FordF150 onefifty = new FordF150();
 
+        //Now I'm going to show the Wingspan of the F150
+        System.out.println("The wingspan of this truck is " + onefifty.getWingspan() + " inches.");
+
+        //Next I'll show the top flight speed of the truck
+        System.out.println("The top flight speed of this truck is " + onefifty.getFlightSpeed() + " miles per hour.");
+
+        //And finally the company that provided the jet engine that allows this vehicle to fly at all
+        System.out.println("The company that produced the jet is " + onefifty.getJetCompany());
 
 
     }

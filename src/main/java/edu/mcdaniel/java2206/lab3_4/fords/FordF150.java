@@ -1,13 +1,14 @@
 package edu.mcdaniel.java2206.lab3_4.fords;
 
 import edu.mcdaniel.java2206.lab3_4.car.VehicleAbstractClass;
+import edu.mcdaniel.java2206.lab3_4.interfaces.FlyingCar;
 import edu.mcdaniel.java2206.lab3_4.interfaces.Vehicle;
 import edu.mcdaniel.java2206.lab3_4.interfaces.WifiEnabledVehicle;
 import edu.mcdaniel.java2206.lab3_4.security.Token;
 import edu.mcdaniel.java2206.lab3_4.security.TokenFactory;
 import edu.mcdaniel.java2206.lab3_4.security.WifiProviderName;
 
-public class FordF150 extends VehicleAbstractClass implements Vehicle, WifiEnabledVehicle {
+public class FordF150 extends VehicleAbstractClass implements Vehicle, WifiEnabledVehicle, FlyingCar {
 
     //Private Assets
     private double accelerationRate;
@@ -74,6 +75,21 @@ public class FordF150 extends VehicleAbstractClass implements Vehicle, WifiEnabl
         return TokenFactory.getToken(this.getWifiProvider(),
                 this.getNetworkName(),
                 this.f150WifiPassword);
+    }
+
+    @Override
+    public double getWingspan(){
+        return 217.5;
+    }
+
+    @Override
+    public int getFlightSpeed(){
+        return 70;
+    }
+
+    @Override
+    public String getJetCompany(){
+        return "Boeing";
     }
 
     //Getters
